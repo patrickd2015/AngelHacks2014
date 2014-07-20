@@ -44,7 +44,6 @@
     questionAnswers = [PFObject objectWithClassName:@"questionAnswers"];
     
     [self retrivePreviousID];
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -360,8 +359,8 @@
                 currentObjectID = object.objectId;
                 NSLog(@"%@", currentObjectID);
                 
-                _chemistry = questionAnswers[@"Chemistry"];
-                _chemistryq =questionAnswers[@"ChemistryQ"];
+                _chemistry = object[@"Chemistry"];
+                _chemistryq = object[@"ChemistryQ"];
             }
         } else {
             // Log details of the failure
@@ -371,7 +370,7 @@
 }
 
 -(void)updateToCloud{
-    PFQuery *query = [PFQuery queryWithClassName:@"QuestionAnswers"];
+    PFQuery *query = [PFQuery queryWithClassName:@"questionAnswers"];
     
     // Retrieve the object by id
     [query getObjectInBackgroundWithId:currentObjectID block:^(PFObject *Answers, NSError *error) {
