@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController{
+    PFObject *questionAnswers;
+}
 
 - (void)viewDidLoad
 { _category = [NSString stringWithFormat:@""];
@@ -37,6 +39,8 @@
     
     [super viewDidLoad];
 	_useractiontype = [NSString stringWithFormat:@""];
+    
+    questionAnswers = [PFObject objectWithClassName:@"questionAnswers"];
     
 }
 
@@ -309,7 +313,6 @@
 }
 
 -(void)pushToCloud{
-    PFObject *questionAnswers = [PFObject objectWithClassName:@"questionAnswers"];
     questionAnswers[@"Chemistry"] = _chemistry;
     questionAnswers[@"Biology"] = _biology;
     questionAnswers[@"History"] = _history;
