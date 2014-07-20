@@ -68,25 +68,41 @@
 }
 
 -(IBAction)next:(id)sender {
-   if([_category isEqualToString: @"Chemistry"]) {
+  
+    if(! _a >= [_chemistry count]){
+    if([_category isEqualToString: @"Chemistry"]) {
        _textview.text = [_chemistry objectAtIndex:_a];
-   }
-
+    }} else {
+        _textview.text = @"no more questions";
+    }
+  if(! _b >= [_biology count]){
     if([_category isEqualToString: @"Biology"]) {
         _textview.text = [_biology objectAtIndex:_b];
+    }}else {
+        _textview.text = @"no more questions";
     }
 
+  if( ! _c >= [_history count]){
     if([_category isEqualToString: @"History"]) {
         _textview.text = [_history objectAtIndex:_c];
+    }}else {
+        _textview.text = @"no more questions";
     }
 
+    if(! _d >= [_math count]){
     if([_category isEqualToString: @"Math"]) {
         _textview.text = [_math objectAtIndex:_d];
+    }}else {
+        _textview.text = @"no more questions";
     }
 
+ if(! _e >= [_physics count]){
     if([_category isEqualToString: @"Physics"]) {
         _textview.text = [_physics objectAtIndex:_e];
+    }}else {
+        _textview.text = @"no more questions";
     }
+
 }
 
 -(IBAction)submitquestion:(id)sender {
@@ -221,7 +237,7 @@
         _submitbutton.hidden = NO;
         if([_category isEqualToString: @"Chemistry"]) {
             
-           
+            
            
          NSString * question = [_chemistry objectAtIndex:_a];
             _textview.text = question;
@@ -230,28 +246,26 @@
         
         if([_category isEqualToString: @"Biology"]) {
             
-            NSString * question = [_biology objectAtIndex:_a];
+            NSString * question = [_biology objectAtIndex:_b];
             _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"History"]) {
             
-            NSString * question = [_history objectAtIndex:_a];
+            NSString * question = [_history objectAtIndex:_c];
             _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"Math"]) {
-            
-            NSString * question = [_math objectAtIndex:_a];
+                          NSString * question = [_math objectAtIndex:_d];
             _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"Physics"]) {
-            
-            NSString * question = [_physics objectAtIndex:_a];
+                       NSString * question = [_physics objectAtIndex:_e];
             _textview.text = question;
             
         }
