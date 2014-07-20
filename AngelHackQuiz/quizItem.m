@@ -11,7 +11,7 @@
 @implementation quizItem
 
 -(void)addQuestion:(NSString*) newQuestion {
-    self.askedQuestion = newQuestion;
+    self.question = newQuestion;
 }
 
 -(void)addAnswer: (NSString*) newAnswer{
@@ -21,7 +21,7 @@
 -(id)initWithQuestion:(NSString *)aQuestion{
     if(self = [super init])
     {
-        self.askedQuestion = aQuestion;
+        self.question = aQuestion;
         self.answer = @"";
     }
     return self;
@@ -30,7 +30,7 @@
 -(id)initWithQuestion:(NSString *)aQuestion andAnswer:(NSString *)aAnswer{
     if(self = [super init])
     {
-        self.askedQuestion = aQuestion;
+        self.question = aQuestion;
         self.answer = aAnswer;
     }
     return self;
@@ -42,7 +42,7 @@
     
     if(newInstance){
         
-    _askedQuestion = [NSString stringWithFormat:@""];
+    _question = [NSString stringWithFormat:@""];
         _answer = [NSString stringWithFormat:@""];
         
         return newInstance;

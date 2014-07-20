@@ -10,7 +10,7 @@
 
 @interface quizItem : NSObject
 
-@property(strong) NSString *askedQuestion;
+@property(strong) NSString *question;
 @property(strong) NSString *answer;
 
 -(void)addQuestion: (NSString *)newQuestion;
