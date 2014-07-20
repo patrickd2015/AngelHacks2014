@@ -31,6 +31,7 @@
      _math = [[NSMutableArray alloc]init];
     [super viewDidLoad];
 	_useractiontype = [NSString stringWithFormat:@""];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -103,7 +104,6 @@
            
            [_chemistry replaceObjectAtIndex:_a withObject: item];
            _a++;
-           
        }
        
        if([_category isEqualToString: @"Biology"]) {
@@ -130,7 +130,7 @@
            item = [_math objectAtIndex:_d];
            item.answer = _askfield.text;
            [_math replaceObjectAtIndex:_d withObject: item];
-       _d++;
+           _d++;
        }
        
        if([_category isEqualToString: @"Physics"]) {
@@ -157,6 +157,7 @@
         quizItem * item = [[quizItem alloc]init];
         item.question = _askfield.text;
         [_chemistry addObject:item];
+        [self pushToCloud];
     }
     
     if([_category isEqualToString: @"Biology"]) {
@@ -322,8 +323,14 @@
     
 }
 
-
-
-
+-(void)pushToCloud{
+    PFObject *questionAnswers = [PFObject objectWithClassName:@"questionAnswers"];
+    questionAnswers[@"Chemistry"] = _chemistry;
+    questionAnswers[@"Biology"] = _biology;
+    questionAnswers[@"History"] = _history;
+    questionAnswers[@"Math"] = _math;
+    questionAnswers[@"Physics"] = _physics;
+    [questionAnswers saveInBackground];
+}
 
 @end
