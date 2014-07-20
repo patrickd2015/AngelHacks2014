@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "quizItem.h"
 
 @interface ViewController ()
 
@@ -29,6 +28,13 @@
      _chemistry = [[NSMutableArray alloc]init];
      _history = [[NSMutableArray alloc]init];
      _math = [[NSMutableArray alloc]init];
+    
+    _physicsq = [[NSMutableArray alloc]init];
+    _biologyq = [[NSMutableArray alloc]init];
+    _chemistryq = [[NSMutableArray alloc]init];
+    _historyq = [[NSMutableArray alloc]init];
+    _mathq = [[NSMutableArray alloc]init];
+    
     [super viewDidLoad];
 	_useractiontype = [NSString stringWithFormat:@""];
     
@@ -59,38 +65,25 @@
 
 -(IBAction)next:(id)sender {
    if([_category isEqualToString: @"Chemistry"]) {
-    quizItem * item = [[quizItem alloc]init];
-    item = [_chemistry objectAtIndex:_a];
-    _textview.text = item.question;
+       _textview.text = [_chemistry objectAtIndex:_a];
    }
 
     if([_category isEqualToString: @"Biology"]) {
-        quizItem * item = [[quizItem alloc]init];
-        item = [_biology objectAtIndex:_b];
-        _textview.text = item.question;
+        _textview.text = [_biology objectAtIndex:_b];
     }
 
-    
-
     if([_category isEqualToString: @"History"]) {
-        quizItem * item = [[quizItem alloc]init];
-        item = [_history objectAtIndex:_c];
-        _textview.text = item.question;
+        _textview.text = [_history objectAtIndex:_c];
     }
 
     if([_category isEqualToString: @"Math"]) {
-        quizItem * item = [[quizItem alloc]init];
-        item = [_math objectAtIndex:_d];
-        _textview.text = item.question;
+        _textview.text = [_math objectAtIndex:_d];
     }
 
     if([_category isEqualToString: @"Physics"]) {
-        quizItem * item = [[quizItem alloc]init];
-        item = [_physics objectAtIndex:_e];
-        _textview.text = item.question;
+        _textview.text = [_physics objectAtIndex:_e];
     }
 }
-
 
 -(IBAction)submitquestion:(id)sender {
     
@@ -98,48 +91,48 @@
     
        if([_category isEqualToString: @"Chemistry"]) {
            
-           quizItem * item = [[quizItem alloc]init];
-          item = [_chemistry objectAtIndex:_a];
-           item.answer = _askfield.text;
+          [_chemistryq objectAtIndex:_a];
+           NSString*answer= _askfield.text;
            
-           [_chemistry replaceObjectAtIndex:_a withObject: item];
+           [_chemistry replaceObjectAtIndex:_a withObject:answer];
            _a++;
        }
        
        if([_category isEqualToString: @"Biology"]) {
            
-           quizItem * item = [[quizItem alloc]init];
-           item = [_biology objectAtIndex:_b];
-           item.answer = _askfield.text;
-           [_biology replaceObjectAtIndex:_b withObject: item];
-       _b++;
+           [_biologyq objectAtIndex:_a];
+           NSString*answer= _askfield.text;
+           
+           [_biology replaceObjectAtIndex:_a withObject:answer];
+           _b++;
        }
        
        if([_category isEqualToString: @"History"]) {
            
-           quizItem * item = [[quizItem alloc]init];
-           item = [_history objectAtIndex:_c];
-           item.answer = _askfield.text;
-           [_history replaceObjectAtIndex:_c withObject: item];
+           [_historyq objectAtIndex:_a];
+           NSString*answer= _askfield.text;
+           
+           [_history replaceObjectAtIndex:_a withObject:answer];
            _c++;
+
        }
        
        if([_category isEqualToString: @"Math"]) {
            
-           quizItem * item = [[quizItem alloc]init];
-           item = [_math objectAtIndex:_d];
-           item.answer = _askfield.text;
-           [_math replaceObjectAtIndex:_d withObject: item];
+           [_mathq objectAtIndex:_d];
+           NSString*answer= _askfield.text;
+           
+           [_math replaceObjectAtIndex:_d withObject:answer];
            _d++;
        }
        
        if([_category isEqualToString: @"Physics"]) {
            
-           quizItem * item = [[quizItem alloc]init];
-           item = [_physics objectAtIndex:_e];
-           item.answer = _askfield.text;
-           [_physics replaceObjectAtIndex:_e withObject: item];
-       _e++;
+           [_mathq objectAtIndex:_e];
+           NSString*answer= _askfield.text;
+           
+           [_math replaceObjectAtIndex:_e withObject:answer];
+           _e++;
        }
 
     
@@ -154,42 +147,43 @@
     
         NSLog(@"%@",_category);
         
-        quizItem * item = [[quizItem alloc]init];
-        item.question = _askfield.text;
-        [_chemistry addObject:item];
+        
+        NSString *question = _askfield.text;
+        [_chemistry addObject:question];
+        [_chemistryq addObject:@"temp"];
         [self pushToCloud];
     }
     
     if([_category isEqualToString: @"Biology"]) {
         
-        quizItem * item = [[quizItem alloc]init];
-        item.question = _askfield.text;
-        [_biology addObject:item];
+        NSString *question = _askfield.text;
+        [_biology addObject:question];
+        [_biologyq addObject:@"temp"];
 
     }
     
     if([_category isEqualToString: @"History"]) {
         
-        quizItem * item = [[quizItem alloc]init];
-        item.question = _askfield.text;
-        [_history addObject:item];
+        
+        NSString *question = _askfield.text;
+        [_history addObject:question];
+        [_historyq addObject:@"temp"];
 
     }
     
     if([_category isEqualToString: @"Math"]) {
         
-        quizItem * item = [[quizItem alloc]init];
-        item.question = _askfield.text;
-        [_math addObject:item];
-        NSLog(@"%@",item);
+        NSString *question = _askfield.text;
+        [_math addObject:question];
+        [_math addObject:@"temp"];
     
     }
     
     if([_category isEqualToString: @"Physics"]) {
         
-        quizItem * item = [[quizItem alloc]init];
-        item.question = _askfield.text;
-        [_physics addObject:item];
+        NSString *question = _askfield.text;
+        [_physics addObject:question];
+        [_physicsq addObject:@"temp"];
 
     }
     }
@@ -217,47 +211,38 @@
         _submitbutton.hidden = NO;
         if([_category isEqualToString: @"Chemistry"]) {
             
-            quizItem * item = [[quizItem alloc]init];
            
-          item = [_chemistry objectAtIndex:_a];
-            _textview.text = item.question;
+           
+         NSString * question = [_chemistry objectAtIndex:_a];
+            _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"Biology"]) {
             
-            quizItem * item = [[quizItem alloc]init];
-    
-            item = [_biology objectAtIndex:_b];
-            _textview.text = item.question;
+            NSString * question = [_biology objectAtIndex:_a];
+            _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"History"]) {
             
-            quizItem * item = [[quizItem alloc]init];
-            
-            item = [_history objectAtIndex:_c];
-            _textview.text = item.question;
+            NSString * question = [_history objectAtIndex:_a];
+            _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"Math"]) {
             
-            quizItem * item = [[quizItem alloc]init];
-            
-            item = [_math objectAtIndex:_d];
-            
-            NSLog(@"%@",item.question);
-            _textview.text = item.question;
+            NSString * question = [_math objectAtIndex:_a];
+            _textview.text = question;
             
         }
         
         if([_category isEqualToString: @"Physics"]) {
             
-            quizItem * item = [[quizItem alloc]init];
-            item = [_physics objectAtIndex:_e];
-            _textview.text = item.question;
+            NSString * question = [_physics objectAtIndex:_a];
+            _textview.text = question;
             
         }
 
@@ -330,6 +315,13 @@
     questionAnswers[@"History"] = _history;
     questionAnswers[@"Math"] = _math;
     questionAnswers[@"Physics"] = _physics;
+    
+    questionAnswers[@"ChemistryQ"] = _chemistryq;
+    questionAnswers[@"BiologyQ"] = _biologyq;
+    questionAnswers[@"HistoryQ"] = _historyq;
+    questionAnswers[@"MathQ"] = _mathq;
+    questionAnswers[@"PhysicsQ"] = _physicsq;
+    
     [questionAnswers saveInBackground];
 }
 

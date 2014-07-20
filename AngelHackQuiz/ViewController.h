@@ -11,10 +11,15 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic) NSMutableArray * physics;
+@property (nonatomic) NSMutableArray * physicsq;
 @property (nonatomic) NSMutableArray * math;
+@property (nonatomic) NSMutableArray * mathq;
 @property (nonatomic) NSMutableArray * chemistry;
+@property (nonatomic) NSMutableArray * chemistryq;
 @property (nonatomic) NSMutableArray * biology;
+@property (nonatomic) NSMutableArray * biologyq;
 @property (nonatomic) NSMutableArray * history;
+@property (nonatomic) NSMutableArray * historyq;
 @property (nonatomic) NSString * category;
 @property (nonatomic) IBOutlet UIButton * askquestion;
 @property (nonatomic) IBOutlet UIButton * answerquestion;
