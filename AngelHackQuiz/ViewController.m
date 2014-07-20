@@ -91,47 +91,52 @@
     
        if([_category isEqualToString: @"Chemistry"]) {
            
-          [_chemistryq objectAtIndex:_a];
+          
            NSString*answer= _askfield.text;
            
-           [_chemistry replaceObjectAtIndex:_a withObject:answer];
+           [_chemistryq replaceObjectAtIndex:_a withObject:answer];
+           [self pushToCloud];
            _a++;
        }
        
        if([_category isEqualToString: @"Biology"]) {
            
-           [_biologyq objectAtIndex:_a];
+           
            NSString*answer= _askfield.text;
            
-           [_biology replaceObjectAtIndex:_a withObject:answer];
+           [_biologyq replaceObjectAtIndex:_a withObject:answer];
+           [self pushToCloud];
            _b++;
        }
        
        if([_category isEqualToString: @"History"]) {
            
-           [_historyq objectAtIndex:_a];
+           
            NSString*answer= _askfield.text;
            
-           [_history replaceObjectAtIndex:_a withObject:answer];
+           [_historyq replaceObjectAtIndex:_a withObject:answer];
+          [self pushToCloud];
            _c++;
 
        }
        
        if([_category isEqualToString: @"Math"]) {
            
-           [_mathq objectAtIndex:_d];
+           
            NSString*answer= _askfield.text;
            
-           [_math replaceObjectAtIndex:_d withObject:answer];
+           [_mathq replaceObjectAtIndex:_d withObject:answer];
+          [self pushToCloud];
            _d++;
        }
        
        if([_category isEqualToString: @"Physics"]) {
            
-           [_mathq objectAtIndex:_e];
+           
            NSString*answer= _askfield.text;
            
-           [_math replaceObjectAtIndex:_e withObject:answer];
+           [_physicsq replaceObjectAtIndex:_e withObject:answer];
+         [self pushToCloud];
            _e++;
        }
 
@@ -159,6 +164,7 @@
         NSString *question = _askfield.text;
         [_biology addObject:question];
         [_biologyq addObject:@"temp"];
+        [self pushToCloud];
 
     }
     
@@ -168,15 +174,15 @@
         NSString *question = _askfield.text;
         [_history addObject:question];
         [_historyq addObject:@"temp"];
-
+[self pushToCloud];
     }
     
     if([_category isEqualToString: @"Math"]) {
         
         NSString *question = _askfield.text;
         [_math addObject:question];
-        [_math addObject:@"temp"];
-    
+        [_mathq addObject:@"temp"];
+    [self pushToCloud];
     }
     
     if([_category isEqualToString: @"Physics"]) {
@@ -184,7 +190,7 @@
         NSString *question = _askfield.text;
         [_physics addObject:question];
         [_physicsq addObject:@"temp"];
-
+[self pushToCloud];
     }
     }
     
