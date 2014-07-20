@@ -361,6 +361,18 @@
                 
                 _chemistry = object[@"Chemistry"];
                 _chemistryq = object[@"ChemistryQ"];
+                
+                _biology = object[@"Biology"];
+                _biologyq = object[@"BiologyQ"];
+                
+                _history = object[@"History"];
+                _historyq = object[@"HistoryQ"];
+                
+                _math = object[@"Math"];
+                _mathq = object[@"MathQ"];
+                
+                _physics = object[@"Physics"];
+                _physics = object[@"PhysicsQ"];
             }
         } else {
             // Log details of the failure
