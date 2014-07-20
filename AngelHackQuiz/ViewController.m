@@ -17,7 +17,13 @@
 
 - (void)viewDidLoad
 { _category = [NSString stringWithFormat:@""];
-    _i=0;
+    _a=0;
+    _b=0;
+    _c=0;
+    _d=0;
+    _e=0;
+ 
+    
     _physics = [[NSMutableArray alloc]init];
      _biology = [[NSMutableArray alloc]init];
      _chemistry = [[NSMutableArray alloc]init];
@@ -53,13 +59,13 @@
 -(IBAction)next:(id)sender {
    if([_category isEqualToString: @"Chemistry"]) {
     quizItem * item = [[quizItem alloc]init];
-    item = [_chemistry objectAtIndex:_i];
+    item = [_chemistry objectAtIndex:_a];
     _textview.text = item.question;
    }
 
     if([_category isEqualToString: @"Biology"]) {
         quizItem * item = [[quizItem alloc]init];
-        item = [_biology objectAtIndex:_i];
+        item = [_biology objectAtIndex:_b];
         _textview.text = item.question;
     }
 
@@ -67,19 +73,19 @@
 
     if([_category isEqualToString: @"History"]) {
         quizItem * item = [[quizItem alloc]init];
-        item = [_history objectAtIndex:_i];
+        item = [_history objectAtIndex:_c];
         _textview.text = item.question;
     }
 
     if([_category isEqualToString: @"Math"]) {
         quizItem * item = [[quizItem alloc]init];
-        item = [_math objectAtIndex:_i];
+        item = [_math objectAtIndex:_d];
         _textview.text = item.question;
     }
 
     if([_category isEqualToString: @"Physics"]) {
         quizItem * item = [[quizItem alloc]init];
-        item = [_physics objectAtIndex:_i];
+        item = [_physics objectAtIndex:_e];
         _textview.text = item.question;
     }
 }
@@ -92,48 +98,48 @@
        if([_category isEqualToString: @"Chemistry"]) {
            
            quizItem * item = [[quizItem alloc]init];
-          item = [_chemistry objectAtIndex:_i];
+          item = [_chemistry objectAtIndex:_a];
            item.answer = _askfield.text;
            
-           [_chemistry replaceObjectAtIndex:_i withObject: item];
-           _i++;
+           [_chemistry replaceObjectAtIndex:_a withObject: item];
+           _a++;
            
        }
        
        if([_category isEqualToString: @"Biology"]) {
            
            quizItem * item = [[quizItem alloc]init];
-           item = [_biology objectAtIndex:_i];
+           item = [_biology objectAtIndex:_b];
            item.answer = _askfield.text;
-           [_biology replaceObjectAtIndex:_i withObject: item];
-       _i++;
+           [_biology replaceObjectAtIndex:_b withObject: item];
+       _b++;
        }
        
        if([_category isEqualToString: @"History"]) {
            
            quizItem * item = [[quizItem alloc]init];
-           item = [_history objectAtIndex:_i];
+           item = [_history objectAtIndex:_c];
            item.answer = _askfield.text;
-           [_history replaceObjectAtIndex:_i withObject: item];
-           _i++;
+           [_history replaceObjectAtIndex:_c withObject: item];
+           _c++;
        }
        
        if([_category isEqualToString: @"Math"]) {
            
            quizItem * item = [[quizItem alloc]init];
-           item = [_math objectAtIndex:_i];
+           item = [_math objectAtIndex:_d];
            item.answer = _askfield.text;
-           [_math replaceObjectAtIndex:_i withObject: item];
-       _i++;
+           [_math replaceObjectAtIndex:_d withObject: item];
+       _d++;
        }
        
        if([_category isEqualToString: @"Physics"]) {
            
            quizItem * item = [[quizItem alloc]init];
-           item = [_physics objectAtIndex:_i];
+           item = [_physics objectAtIndex:_e];
            item.answer = _askfield.text;
-           [_physics replaceObjectAtIndex:_i withObject: item];
-       _i++;
+           [_physics replaceObjectAtIndex:_e withObject: item];
+       _e++;
        }
 
     
@@ -212,7 +218,7 @@
             
             quizItem * item = [[quizItem alloc]init];
            
-          item = [_chemistry objectAtIndex:_i];
+          item = [_chemistry objectAtIndex:_a];
             _textview.text = item.question;
             
         }
@@ -221,7 +227,7 @@
             
             quizItem * item = [[quizItem alloc]init];
     
-            item = [_biology objectAtIndex:_i];
+            item = [_biology objectAtIndex:_b];
             _textview.text = item.question;
             
         }
@@ -230,7 +236,7 @@
             
             quizItem * item = [[quizItem alloc]init];
             
-            item = [_history objectAtIndex:_i];
+            item = [_history objectAtIndex:_c];
             _textview.text = item.question;
             
         }
@@ -239,7 +245,7 @@
             
             quizItem * item = [[quizItem alloc]init];
             
-            item = [_math objectAtIndex:_i];
+            item = [_math objectAtIndex:_d];
             
             NSLog(@"%@",item.question);
             _textview.text = item.question;
@@ -249,7 +255,7 @@
         if([_category isEqualToString: @"Physics"]) {
             
             quizItem * item = [[quizItem alloc]init];
-            item = [_physics objectAtIndex:_i];
+            item = [_physics objectAtIndex:_e];
             _textview.text = item.question;
             
         }

@@ -32,7 +32,12 @@
 @property (nonatomic) IBOutlet UITextView * textview;
 @property (nonatomic) NSString * useractiontype;
 @property (nonatomic) IBOutlet UIButton * next;
-@property (nonatomic) int i;
+@property (nonatomic) int a;
+@property (nonatomic) int b;
+@property (nonatomic) int c;
+@property (nonatomic) int d;
+@property (nonatomic) int e;
+@property (nonatomic) int f;
 -(IBAction)next:(id)sender;
 -(IBAction)askanswertake:(id)sender;
 -(IBAction)submitquestion:(id)sender;
