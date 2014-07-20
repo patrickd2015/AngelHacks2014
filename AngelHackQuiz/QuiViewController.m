@@ -62,6 +62,7 @@
     _h = 0;
     _i =0 ;
     _j = 0;
+    
     _aa = 0;
    _bb = 0;
       _cc = 0;
@@ -94,6 +95,17 @@
     
 }
 
+-(BOOL)compareValues:(NSMutableArray *)sampleArray andValue:(NSString *)secondValue{
+    for(int i = 0; i < [sampleArray count]; i++)
+    {
+        if([[sampleArray objectAtIndex:i] isEqualToString:secondValue])
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 -(IBAction)nextans:(id)sender {
     if(( _aa == 5) == false) {
         if(( _bb == 5)== false) {
@@ -102,43 +114,33 @@
                     if(( _ee == 5) == false) {
     if([_category isEqualToString: @"Chemistry"]) {
         
-        while(YES) {
-            _a = [_chemistryq count] - 1;
-            _b = arc4random() %_a;
+        start1:
+            _a = [_chemistry count];
+            _b = arc4random() % _a;
             
-            NSString * string = [_chemistryq objectAtIndex:_b];
-                
-                for(NSString * tring in _chemrepeat) {
-                    
-                    if([tring isEqualToString: string]) {
-                _akey = @"lock";
-                        
-                    }
-                
-                    if([_akey isEqualToString:@"lock"]) {
-                        break;
-                    }
-                
+                    NSString * question = [_chemistry objectAtIndex: _b];
+            
+            if([question isEqualToString:@""]){
+                goto start1;
+            }
+            if([self compareValues:_chemrepeat andValue:question]){
+                for(NSString* sample in _chemrepeat)
+                {
+                    NSLog(@"%@", sample);
                 }
-             
-    
-            if(![string isEqualToString: @""]) {
-                   if(![_akey isEqualToString: @"lock"]) {
-                       _akey = @"";
-                NSString * string = [_chemistryq objectAtIndex:_b];
-                [_chemrepeat addObject:string];
-                
-                       break;}
-      }
+                NSLog(@" End ");
+                goto start1;
+            }
             
-            
-        }
-
-        
-        NSString * question = [_chemistry objectAtIndex: _b];
-        _questionlabel.text = question;
-        _answerlabel.text =   [_chemistryq objectAtIndex: _b];
-        _aa ++;
+            _questionlabel.text = question;
+            _answerlabel.text =   [_chemistryq objectAtIndex: _b];
+            [_chemrepeat addObject:question];
+        _aa++;
+            for(NSString* sample in _chemrepeat)
+            {
+                NSLog(@"%@", sample);
+            }
+            NSLog(@" End ");
     }
     
     
@@ -374,8 +376,11 @@
     
     if([_category isEqualToString: @"Chemistry"]) {
         
+        _chemrepeat = nil;
+        NSLog(@"reset");
+        
         while(YES) {
-            _a = [_chemistryq count] - 1;
+            _a = [_chemistryq count];
             _b = arc4random() %_a;
             
             NSString * string = [_chemistryq objectAtIndex:_b];
@@ -390,6 +395,8 @@
         NSString * question = [_chemistry objectAtIndex: _b];
         _questionlabel.text = question;
         _answerlabel.text =   [_chemistryq objectAtIndex: _b];
+        [_chemrepeat addObject:question];
+        _aa++;
     }
     
     if([_category isEqualToString: @"Biology"]) {
