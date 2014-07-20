@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface ViewController : UIViewController
 @property (nonatomic) NSMutableArray * physics;
@@ -17,18 +18,25 @@
 @property (nonatomic) NSString * category;
 @property (nonatomic) IBOutlet UIButton * askquestion;
 @property (nonatomic) IBOutlet UIButton * answerquestion;
+@property (nonatomic) IBOutlet UIButton * submitbutton;
 @property (nonatomic) IBOutlet UIButton * takequiz;
 @property (nonatomic) IBOutlet UIButton * addquestion;
 @property (nonatomic) IBOutlet UILabel * headlabel;
-@property (nonatomic) IBOutlet UITextView * askfield;
+@property (nonatomic) IBOutlet UITextField * askfield;
 @property (nonatomic) IBOutlet UIButton* physicsb;
 @property (nonatomic) IBOutlet UIButton * mathb;
 @property (nonatomic) IBOutlet UIButton * chemistryb;
 @property (nonatomic) IBOutlet UIButton * biologyb;
 @property (nonatomic) IBOutlet UIButton * historyb;
 @property (nonatomic) IBOutlet UILabel * questionlabel;
-
--(IBAction)ask:(id)sender;
+@property (nonatomic) IBOutlet UITextView * textview;
+@property (nonatomic) NSString * useractiontype;
+@property (nonatomic) IBOutlet UIButton * next;
+@property (nonatomic) int i;
+-(IBAction)next:(id)sender;
+-(IBAction)askanswertake:(id)sender;
 -(IBAction)submitquestion:(id)sender;
 -(IBAction)getcategory:(id)sender;
+-(IBAction)kill:(id)sender ;
+-(IBAction)back:(id)sender;
 @end

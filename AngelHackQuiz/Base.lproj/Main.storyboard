@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="ask:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="eYx-gk-0b2"/>
+                                    <action selector="askanswertake:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4IH-Vm-5KE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOI-1z-gBC">
@@ -32,6 +32,9 @@
                                 <state key="normal" title="Answer a question">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="askanswertake:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="By9-tg-bd5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcu-31-zzd">
                                 <rect key="frame" x="122" y="381" width="77" height="30"/>
@@ -39,6 +42,9 @@
                                 <state key="normal" title="Take a quiz">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="askanswertake:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gkg-lW-2xc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJH-dH-1xm">
                                 <rect key="frame" x="90" y="39" width="132" height="39"/>
@@ -47,23 +53,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOZ-Dy-QSJ">
-                                <rect key="frame" x="23" y="142" width="277" height="122"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type your question in the space below ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12b-vE-KLA">
-                                <rect key="frame" x="6" y="95" width="309" height="47"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type your question in the field below ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12b-vE-KLA">
+                                <rect key="frame" x="13" y="199" width="309" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n3-BP-jlx">
-                                <rect key="frame" x="103" y="446" width="115" height="30"/>
+                                <rect key="frame" x="103" y="315" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Submit Question">
+                                <state key="normal" title="Submit ">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -120,21 +119,70 @@
                                     <action selector="getcategory:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="exF-FM-lDR"/>
                                 </connections>
                             </button>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-OL-7c4">
+                                <rect key="frame" x="35" y="264" width="265" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="kill:" destination="vXZ-lx-hvc" eventType="editingDidEndOnExit" id="QCP-Wm-EGj"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HDP-OU-fvD">
+                                <rect key="frame" x="223" y="440" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Main Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backtomenu:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u6Q-1o-XQl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5x-VU-kFv">
+                                <rect key="frame" x="13" y="440" width="106" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Category Menu">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backtocategorymenu:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="IOr-M5-nIZ"/>
+                                </connections>
+                            </button>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahH-kU-SAS">
+                                <rect key="frame" x="40" y="86" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T2x-wT-koN">
+                                <rect key="frame" x="268" y="465" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="next:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SPH-kB-Hcb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="answerquestion" destination="yOI-1z-gBC" id="vIt-Xu-eBO"/>
-                        <outlet property="askfield" destination="DOZ-Dy-QSJ" id="avr-D0-cPg"/>
+                        <outlet property="askfield" destination="HSg-OL-7c4" id="MYx-7C-Fgp"/>
                         <outlet property="askquestion" destination="hGR-8U-XYd" id="bFp-FU-NFw"/>
                         <outlet property="biologyb" destination="STL-Jc-nIK" id="q9N-Mo-ygX"/>
                         <outlet property="chemistryb" destination="hQe-Y0-3cC" id="FSN-Ic-6eB"/>
                         <outlet property="headlabel" destination="EJH-dH-1xm" id="S0Z-0g-obe"/>
                         <outlet property="historyb" destination="hrm-6V-Vpm" id="5uS-h4-rkb"/>
                         <outlet property="mathb" destination="nN2-uG-z0Y" id="t3q-ig-mnd"/>
+                        <outlet property="next" destination="T2x-wT-koN" id="IWR-zJ-GO0"/>
                         <outlet property="physicsb" destination="sW9-Ht-9hz" id="vzu-n0-Sgo"/>
                         <outlet property="questionlabel" destination="12b-vE-KLA" id="6ts-lm-5aU"/>
+                        <outlet property="submitbutton" destination="6n3-BP-jlx" id="Qn5-d4-hvJ"/>
                         <outlet property="takequiz" destination="Rcu-31-zzd" id="lZ6-WW-tNV"/>
+                        <outlet property="textview" destination="ahH-kU-SAS" id="Lzh-uX-BhR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
