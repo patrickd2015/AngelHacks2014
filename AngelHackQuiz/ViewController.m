@@ -64,11 +64,12 @@
     _biologyb.hidden = NO;
     _mathb.hidden = NO;
     _headlabel.text = @"Ask";
+    _jackson.hidden = YES;
     
     
 }
 
--(IBAction)next:(id)sender {
+-(IBAction)next:(id)sender { //dosaislife
     
     if([_category isEqualToString: @"Chemistry"]) {
         
@@ -125,64 +126,64 @@
 
 -(IBAction)submitquestion:(id)sender {
     
-    if([_useractiontype isEqualToString:@"Answer a question"]) {
+    if([_useractiontype isEqualToString:@"Answer"]) {
         
         if([_category isEqualToString: @"Chemistry"]) {
             
-            
+             if( _a < [_chemistry count]) {
             NSString*answer= _askfield.text;
             
             [_chemistryq replaceObjectAtIndex:_a withObject:answer];
             [self pushToCloud];
             _a++;
-        }
+             }}
         
         if([_category isEqualToString: @"Biology"]) {
             
-            
+              if( _b < [_biology count]) {
             NSString*answer= _askfield.text;
             
             [_biologyq replaceObjectAtIndex:_a withObject:answer];
             [self pushToCloud];
             _b++;
-        }
+              }}
         
         if([_category isEqualToString: @"History"]) {
             
-            
+            if( _c < [_history count]) {
+
             NSString*answer= _askfield.text;
             
             [_historyq replaceObjectAtIndex:_a withObject:answer];
             [self pushToCloud];
             _c++;
             
-        }
+            }}
         
         if([_category isEqualToString: @"Math"]) {
             
-            
+            if( _d < [_math count]) {
             NSString*answer= _askfield.text;
-            
             [_mathq replaceObjectAtIndex:_d withObject:answer];
             [self pushToCloud];
-            _d++;
+                _d++;}
         }
         
         if([_category isEqualToString: @"Physics"]) {
             
-            
+            if( _e < [_physics count]) {
             NSString*answer= _askfield.text;
             
             [_physicsq replaceObjectAtIndex:_e withObject:answer];
             [self pushToCloud];
             _e++;
-        }
+            }}
         
         
         
     }
     
-    if([_useractiontype isEqualToString:@"Ask a question"]) {
+    if([_useractiontype isEqualToString:@"Ask"]) {
         
         NSLog(@"%@",_category);
         
@@ -238,7 +239,7 @@
 
 -(IBAction)getcategory:(id)sender{
     
-    if([_useractiontype isEqualToString:@"Answer a question"]) {
+    if([_useractiontype isEqualToString:@"Answer"]) {
         
         
         UIButton * title = (UIButton* )sender;
@@ -254,9 +255,17 @@
         _next.hidden = NO;
         _submitbutton.hidden = NO;
         if([_category isEqualToString: @"Chemistry"]) {
+        if(![[_chemistryq objectAtIndex:_a] isEqualToString:@""]) {
+            if(_a != [_chemistryq count]) {
+                
             
+                _a++;
             
-            
+            } else {
+                
+                _textview.text = @"no questions to answer";
+                
+            }}
             NSString * question = [_chemistry objectAtIndex:_a];
             _textview.text = question;
             
@@ -264,25 +273,66 @@
         
         if([_category isEqualToString: @"Biology"]) {
             
+            if(![[_biologyq objectAtIndex:_a] isEqualToString:@""]) {
+                if(_a != [_biologyq count]) {
+                    
+                    
+                    _b++;
+                    
+                } else {
+                    
+                    _textview.text = @"no questions to answer";
+                    
+                }}
             NSString * question = [_biology objectAtIndex:_b];
             _textview.text = question;
-            
         }
         
         if([_category isEqualToString: @"History"]) {
             
+            if(![[_historyq objectAtIndex:_a] isEqualToString:@""]) {
+                if(_c != [_historyq count]) {
+                    
+                    
+                    _c++;
+                    
+                } else {
+                    
+                    _textview.text = @"no questions to answer";
+                    
+                }}
             NSString * question = [_history objectAtIndex:_c];
             _textview.text = question;
-            
         }
         
         if([_category isEqualToString: @"Math"]) {
+            if(![[_math objectAtIndex:_d] isEqualToString:@""]) {
+                if(_a != [_mathq count]) {
+                    
+                    
+                    _d++;
+                    
+                } else {
+                    
+                    _textview.text = @"no questions to answer";
+                    
+                }}
             NSString * question = [_math objectAtIndex:_d];
             _textview.text = question;
-            
         }
         
         if([_category isEqualToString: @"Physics"]) {
+            if(![[_physicsq objectAtIndex:_e] isEqualToString:@""]) {
+                if(_a != [_physicsq count]) {
+                    
+                    
+                    _e++;
+                    
+                } else {
+                    
+                    _textview.text = @"no questions to answer";
+                    
+                }}
             NSString * question = [_physics objectAtIndex:_e];
             _textview.text = question;
             
@@ -292,7 +342,7 @@
     }
     
     
-    if([_useractiontype isEqualToString:@"Ask a question"]) {
+    if([_useractiontype isEqualToString:@"Ask"]) {
         UIButton * title = (UIButton* )sender;
         _category = title.titleLabel.text;
         _askfield.hidden = NO;
@@ -312,7 +362,7 @@
 }
 
 -(IBAction)backtomenu:(id)sender {
-    
+    _jackson.hidden = NO;
     _askfield.hidden = YES;
     _questionlabel.hidden = YES;
     _submitbutton.hidden = YES;
@@ -324,6 +374,13 @@
     _askquestion.hidden = NO;
     _answerquestion.hidden = NO;
     _takequiz.hidden = NO;
+    _next.hidden = YES;
+    _textview.hidden = YES;
+    _a=0;
+    _b=0;
+    _c=0;
+    _d=0;
+    _e=0;
 }
 
 -(IBAction)backtocategorymenu:(id)sender {
@@ -339,6 +396,11 @@
     _askquestion.hidden = YES;
     _answerquestion.hidden = YES;
     _takequiz.hidden = YES;
+     _a=0;
+    _b=0;
+    _c=0;
+    _d=0;
+    _e=0;
     
     
 }

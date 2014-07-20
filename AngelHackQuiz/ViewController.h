@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 @property (nonatomic) NSMutableArray * physics;
+@property (nonatomic) IBOutlet UIImageView * jackson;
 @property (nonatomic) NSMutableArray * physicsq;
 @property (nonatomic) NSMutableArray * math;
 @property (nonatomic) NSMutableArray * mathq;

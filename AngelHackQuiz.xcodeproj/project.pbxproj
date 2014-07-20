@@ -22,6 +22,9 @@
 		2F6CF903197B2981006A6849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CF901197B2981006A6849 /* InfoPlist.strings */; };
 		2F6CF905197B2981006A6849 /* AngelHackQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */; };
 		2F6CF913197BB695006A6849 /* QuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF912197BB695006A6849 /* QuiViewController.m */; };
+		9A47298B197C020B00F8A1CD /* FinalLogoPicture.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A47298A197C020B00F8A1CD /* FinalLogoPicture.png */; };
+		9A47298F197C024200F8A1CD /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A47298E197C024200F8A1CD /* button.png */; };
+		9A472991197C025A00F8A1CD /* QuantizeLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A472990197C025A00F8A1CD /* QuantizeLogo.png */; };
 		CD72AA26197B44A500F3D153 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA25197B44A500F3D153 /* Parse.framework */; };
 		CD72AA28197B44B600F3D153 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA27197B44B600F3D153 /* AudioToolbox.framework */; };
 		CD72AA2A197B44BC00F3D153 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA29197B44BC00F3D153 /* CFNetwork.framework */; };
@@ -66,6 +69,9 @@
 		2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngelHackQuizTests.m; sourceTree = "<group>"; };
 		2F6CF911197BB695006A6849 /* QuiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuiViewController.h; sourceTree = "<group>"; };
 		2F6CF912197BB695006A6849 /* QuiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuiViewController.m; sourceTree = "<group>"; };
+		9A47298A197C020B00F8A1CD /* FinalLogoPicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FinalLogoPicture.png; sourceTree = "<group>"; };
+		9A47298E197C024200F8A1CD /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		9A472990197C025A00F8A1CD /* QuantizeLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QuantizeLogo.png; sourceTree = "<group>"; };
 		CD72AA25197B44A500F3D153 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CD72AA27197B44B600F3D153 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CD72AA29197B44BC00F3D153 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -171,6 +177,9 @@
 		2F6CF8E0197B2981006A6849 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				9A472990197C025A00F8A1CD /* QuantizeLogo.png */,
+				9A47298E197C024200F8A1CD /* button.png */,
+				9A47298A197C020B00F8A1CD /* FinalLogoPicture.png */,
 				2F6CF8E1197B2981006A6849 /* AngelHackQuiz-Info.plist */,
 				2F6CF8E2197B2981006A6849 /* InfoPlist.strings */,
 				2F6CF8E5197B2981006A6849 /* main.m */,
@@ -274,7 +283,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F6CF8F2197B2981006A6849 /* Images.xcassets in Resources */,
+				9A472991197C025A00F8A1CD /* QuantizeLogo.png in Resources */,
+				9A47298F197C024200F8A1CD /* button.png in Resources */,
 				2F6CF8E4197B2981006A6849 /* InfoPlist.strings in Resources */,
+				9A47298B197C020B00F8A1CD /* FinalLogoPicture.png in Resources */,
 				2F6CF8ED197B2981006A6849 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
