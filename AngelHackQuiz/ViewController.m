@@ -71,39 +71,56 @@
 
 -(IBAction)next:(id)sender {
     
-    if(! _a >= [_chemistry count]){
-        if([_category isEqualToString: @"Chemistry"]) {
+    if([_category isEqualToString: @"Chemistry"]) {
+        
+        NSLog(@"%d", [_chemistry count]);
+        NSLog(@"%d", _a);
+        if(( _a >= [_chemistry count]) == false){
+            
+            NSLog(@"%d", [_chemistry count]);
+            
             _textview.text = [_chemistry objectAtIndex:_a];
-        }} else {
-            _textview.text = @"no more questions";
+            _a++;
+        } else {
+            _textview.text = @"no more questions1";
         }
-    if(! _b >= [_biology count]){
-        if([_category isEqualToString: @"Biology"]) {
+    }
+    
+    if([_category isEqualToString: @"Biology"]) {
+        if(( _b >= [_biology count]) == false){
+            
             _textview.text = [_biology objectAtIndex:_b];
-        }}else {
-            _textview.text = @"no more questions";
-        }
+            _b++;
+        }else {
+            _textview.text = @"no more questions2";
+        }}
     
-    if( ! _c >= [_history count]){
-        if([_category isEqualToString: @"History"]) {
+    if([_category isEqualToString: @"History"]) {
+        if(( _c >= [_history count]) == false){
+            
             _textview.text = [_history objectAtIndex:_c];
-        }}else {
-            _textview.text = @"no more questions";
-        }
+            _c++;
+        }else {
+            _textview.text = @"no more questions3";
+        }}
     
-    if(! _d >= [_math count]){
-        if([_category isEqualToString: @"Math"]) {
+    if([_category isEqualToString: @"Math"]) {
+        
+        if(( _d >= [_math count]) == false){
             _textview.text = [_math objectAtIndex:_d];
-        }}else {
-            _textview.text = @"no more questions";
-        }
+            _d++;
+        }else {
+            _textview.text = @"no more questions4";
+        }}
     
-    if(! _e >= [_physics count]){
-        if([_category isEqualToString: @"Physics"]) {
+    if([_category isEqualToString: @"Physics"]) {
+        if( (_e >= [_physics count]) == false){
+            
             _textview.text = [_physics objectAtIndex:_e];
-        }}else {
-            _textview.text = @"no more questions";
-        }
+            _e++;
+        }else {
+            _textview.text = @"no more questions5";
+        }}
     
 }
 
@@ -177,7 +194,7 @@
             
             NSString *question = _askfield.text;
             [_chemistry addObject:question];
-            [_chemistryq addObject:@"temp"];
+            [_chemistryq addObject:@""];
             [self pushToCloud];
         }
         
@@ -185,7 +202,7 @@
             
             NSString *question = _askfield.text;
             [_biology addObject:question];
-            [_biologyq addObject:@"temp"];
+            [_biologyq addObject:@""];
             [self pushToCloud];
             
         }
@@ -195,7 +212,7 @@
             
             NSString *question = _askfield.text;
             [_history addObject:question];
-            [_historyq addObject:@"temp"];
+            [_historyq addObject:@""];
             [self pushToCloud];
         }
         
@@ -203,7 +220,7 @@
             
             NSString *question = _askfield.text;
             [_math addObject:question];
-            [_mathq addObject:@"temp"];
+            [_mathq addObject:@""];
             [self pushToCloud];
         }
         
@@ -211,7 +228,7 @@
             
             NSString *question = _askfield.text;
             [_physics addObject:question];
-            [_physicsq addObject:@"temp"];
+            [_physicsq addObject:@""];
             [self pushToCloud];
         }
     }
@@ -271,13 +288,6 @@
             _textview.text = question;
             
         }
-        
-        
-    }
-    
-    if([_useractiontype isEqualToString:@"Take a quiz"]) {
-        
-        
         
         
     }

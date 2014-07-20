@@ -21,6 +21,7 @@
 		2F6CF8FB197B2981006A6849 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F6CF8DD197B2981006A6849 /* UIKit.framework */; };
 		2F6CF903197B2981006A6849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CF901197B2981006A6849 /* InfoPlist.strings */; };
 		2F6CF905197B2981006A6849 /* AngelHackQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */; };
+		2F6CF913197BB695006A6849 /* QuiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF912197BB695006A6849 /* QuiViewController.m */; };
 		CD72AA26197B44A500F3D153 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA25197B44A500F3D153 /* Parse.framework */; };
 		CD72AA28197B44B600F3D153 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA27197B44B600F3D153 /* AudioToolbox.framework */; };
 		CD72AA2A197B44BC00F3D153 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA29197B44BC00F3D153 /* CFNetwork.framework */; };
@@ -63,6 +64,8 @@
 		2F6CF900197B2981006A6849 /* AngelHackQuizTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AngelHackQuizTests-Info.plist"; sourceTree = "<group>"; };
 		2F6CF902197B2981006A6849 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngelHackQuizTests.m; sourceTree = "<group>"; };
+		2F6CF911197BB695006A6849 /* QuiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuiViewController.h; sourceTree = "<group>"; };
+		2F6CF912197BB695006A6849 /* QuiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuiViewController.m; sourceTree = "<group>"; };
 		CD72AA25197B44A500F3D153 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		CD72AA27197B44B600F3D153 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		CD72AA29197B44BC00F3D153 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -152,6 +155,8 @@
 		2F6CF8DF197B2981006A6849 /* AngelHackQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				2F6CF911197BB695006A6849 /* QuiViewController.h */,
+				2F6CF912197BB695006A6849 /* QuiViewController.m */,
 				2F6CF8E8197B2981006A6849 /* AppDelegate.h */,
 				2F6CF8E9197B2981006A6849 /* AppDelegate.m */,
 				2F6CF8EB197B2981006A6849 /* Main.storyboard */,
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F6CF913197BB695006A6849 /* QuiViewController.m in Sources */,
 				2F6CF8F0197B2981006A6849 /* ViewController.m in Sources */,
 				2F6CF8EA197B2981006A6849 /* AppDelegate.m in Sources */,
 				2F6CF8E6197B2981006A6849 /* main.m in Sources */,
