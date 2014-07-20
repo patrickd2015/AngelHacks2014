@@ -106,6 +106,7 @@
 }
 
 -(IBAction)nextans:(id)sender {
+    _answerlabel.hidden = YES;
     if(( _aa == 5) == false) {
         if(( _bb == 5)== false) {
             if(( _cc == 5)== false) {
@@ -134,12 +135,16 @@
                             _questionlabel.text = question;
                             _answerlabel.text =   [_chemistryq objectAtIndex: _b];
                             [_chemrepeat addObject:question];
+                            NSString * ring = [NSString stringWithFormat:@"%d/5",_aa + 1];
+                            _mylabel.text = ring;
                             _aa++;
                             for(NSString* sample in _chemrepeat)
                             {
                                 NSLog(@"%@", sample);
                             }
                             NSLog(@" End ");
+                        
+                        
                         }
                         
                         
@@ -166,6 +171,8 @@
                             _questionlabel.text = question;
                             _answerlabel.text =   [_biologyq objectAtIndex: _d];
                             [_biorepeat addObject:question];
+                            NSString * ring = [NSString stringWithFormat:@"%d/5",_bb + 1];
+                            _mylabel.text = ring;
                             _bb++;
                             for(NSString* sample in _biorepeat)
                             {
@@ -199,6 +206,8 @@
                             _questionlabel.text = question;
                             _answerlabel.text =   [_historyq objectAtIndex: _f];
                             [_historepeat addObject:question];
+                            NSString * ring = [NSString stringWithFormat:@"%d/5",_cc + 1];
+                            _mylabel.text = ring;
                             _cc++;
                             for(NSString* sample in _historepeat)
                             {
@@ -230,6 +239,9 @@
                             _questionlabel.text = question;
                             _answerlabel.text =   [_mathq objectAtIndex: _h];
                             [_mathrepeat addObject:question];
+                            NSString * ring = [NSString stringWithFormat:@"%d/5", _dd + 1];
+                            _mylabel.text = ring;
+                
                             _dd++;
                             for(NSString* sample in _mathrepeat)
                             {
@@ -243,7 +255,7 @@
                         if([_category isEqualToString: @"Physics"]) {
                             
                         start5:
-                            _i = [_chemistry count];
+                            _i = [_physics count];
                             _j = arc4random() % _i;
                             
                             NSString * question = [_physics objectAtIndex: _j];
@@ -263,7 +275,11 @@
                             _questionlabel.text = question;
                             _answerlabel.text =   [_physicsq objectAtIndex: _j];
                             [_physrepeat addObject:question];
-                            _aa++;
+                            NSString * ring = [NSString stringWithFormat:@"%d/5", _ee + 1];
+                            _mylabel.text = ring;
+
+            
+                            _ee++;
                             for(NSString* sample in _physrepeat)
                             {
                                 NSLog(@"%@", sample);
@@ -274,9 +290,8 @@
                         
                     } else {
                         
-                        
-                        _label.hidden = NO;
-                        _label.text = @"finished";
+                        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                        [alert show];
                         
                     }
                     
@@ -285,9 +300,8 @@
                     
                 } else {
                     
-                    _label.hidden = NO;
-                    _label.text = @"finished";
-                    
+                    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                    [alert show];
                     
                 }
                 
@@ -295,17 +309,15 @@
                 
             } else {
                 
-                _label.hidden = NO;
-                _label.text = @"finished";
-                
-                
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                [alert show];
             }
             
             
         } else {
             
-            _label.hidden = NO;
-            _label.text = @"finished";
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            [alert show];
             
             
         }
@@ -313,10 +325,8 @@
         
     } else {
         
-        _label.hidden = NO;
-        _label.text = @"finished";
-        
-        
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        [alert show];
     }
     
     
@@ -338,7 +348,6 @@
     
     if([_category isEqualToString: @"Chemistry"]) {
         
-        _chemrepeat = nil;
         NSLog(@"reset");
         
         while(YES) {
@@ -358,7 +367,11 @@
         _questionlabel.text = question;
         _answerlabel.text =   [_chemistryq objectAtIndex: _b];
         [_chemrepeat addObject:question];
+         NSString * ring = [NSString stringWithFormat:@"%d/5",_aa + 1];
+        _mylabel.text = ring;
         _aa++;
+       
+    
     }
     
     if([_category isEqualToString: @"Biology"]) {
@@ -382,6 +395,8 @@
         NSString * question = [_biology objectAtIndex: _d];
         _questionlabel.text = question;
         _answerlabel.text =   [_biologyq objectAtIndex: _d];
+        NSString * ring = [NSString stringWithFormat:@"%d/5",_bb + 1];
+        _mylabel.text = ring;
         _bb ++;
     }
     
@@ -406,6 +421,8 @@
         NSString * question = [_history objectAtIndex:_f];
         _questionlabel.text = question;
         _answerlabel.text =   [_historyq objectAtIndex: _f];
+        NSString * ring = [NSString stringWithFormat:@"%d/5",_cc + 1];
+        _mylabel.text = ring;
         _cc ++;
     }
     
@@ -428,6 +445,8 @@
         NSString * question = [_math objectAtIndex:_h];
         _questionlabel.text = question;
         _answerlabel.text =   [_mathq objectAtIndex: _h];
+        NSString * ring = [NSString stringWithFormat:@"%d/5",_dd + 1];
+        _mylabel.text = ring;
         _dd++;
     }
     
@@ -451,6 +470,8 @@
         NSString * question = [_physics objectAtIndex:_j];
         _questionlabel.text = question;
         _answerlabel.text =   [_physicsq objectAtIndex: _j];
+        NSString * ring = [NSString stringWithFormat:@"%d/5",_ee + 1];
+        _mylabel.text = ring;
         _ee++;
     }
     

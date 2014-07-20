@@ -134,7 +134,8 @@
             NSString*answer= _askfield.text;
             
             [_chemistryq replaceObjectAtIndex:_a withObject:answer];
-            [self pushToCloud];
+             _askfield.text = @"";
+                 [self pushToCloud];
             _a++;
              }}
         
@@ -144,7 +145,8 @@
             NSString*answer= _askfield.text;
             
             [_biologyq replaceObjectAtIndex:_a withObject:answer];
-            [self pushToCloud];
+             _askfield.text = @"";
+                  [self pushToCloud];
             _b++;
               }}
         
@@ -155,7 +157,8 @@
             NSString*answer= _askfield.text;
             
             [_historyq replaceObjectAtIndex:_a withObject:answer];
-            [self pushToCloud];
+             _askfield.text = @"";
+                [self pushToCloud];
             _c++;
             
             }}
@@ -165,7 +168,8 @@
             if( _d < [_math count]) {
             NSString*answer= _askfield.text;
             [_mathq replaceObjectAtIndex:_d withObject:answer];
-            [self pushToCloud];
+             _askfield.text = @"";
+                [self pushToCloud];
                 _d++;}
         }
         
@@ -175,7 +179,8 @@
             NSString*answer= _askfield.text;
             
             [_physicsq replaceObjectAtIndex:_e withObject:answer];
-            [self pushToCloud];
+             _askfield.text = @"";
+                [self pushToCloud];
             _e++;
             }}
         
@@ -195,6 +200,7 @@
             NSString *question = _askfield.text;
             [_chemistry addObject:question];
             [_chemistryq addObject:@""];
+            _askfield.text = @"";
             [self pushToCloud];
         }
         
@@ -203,6 +209,7 @@
             NSString *question = _askfield.text;
             [_biology addObject:question];
             [_biologyq addObject:@""];
+             _askfield.text = @"";
             [self pushToCloud];
             
         }
@@ -213,6 +220,7 @@
             NSString *question = _askfield.text;
             [_history addObject:question];
             [_historyq addObject:@""];
+            _askfield.text = @"";
             [self pushToCloud];
         }
         
@@ -221,6 +229,7 @@
             NSString *question = _askfield.text;
             [_math addObject:question];
             [_mathq addObject:@""];
+             _askfield.text = @"";
             [self pushToCloud];
         }
         
@@ -229,6 +238,7 @@
             NSString *question = _askfield.text;
             [_physics addObject:question];
             [_physicsq addObject:@""];
+            _askfield.text = @"";
             [self pushToCloud];
         }
     }

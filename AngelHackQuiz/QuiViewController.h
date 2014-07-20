@@ -41,6 +41,7 @@
 @property (nonatomic) IBOutlet UITextField * field;
 @property (nonatomic) IBOutlet UIButton * show;
 @property (nonatomic) IBOutlet UIButton * next;
+@property (nonatomic) IBOutlet UILabel * mylabel;
 @property (nonatomic) int a ;
 @property (nonatomic) int b ;
 @property (nonatomic) int c ;
