@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A7F1DF9F-8975-4BF4-ADCB-0B13937BC45F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AngelHackQuiz</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E5E1A6AD-9BB2-4333-9342-EBAC603F0CD0</key>
+		<string>ssh://github.com/patrickd2015/AngelHacks2014.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AngelHackQuiz.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E5E1A6AD-9BB2-4333-9342-EBAC603F0CD0</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/patrickd2015/AngelHacks2014.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E5E1A6AD-9BB2-4333-9342-EBAC603F0CD0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5E1A6AD-9BB2-4333-9342-EBAC603F0CD0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AngelHackQuiz</string>
+		</dict>
+	</array>
+</dict>
+</plist>

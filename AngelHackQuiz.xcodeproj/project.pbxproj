@@ -22,6 +22,16 @@
 		2F6CF903197B2981006A6849 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F6CF901197B2981006A6849 /* InfoPlist.strings */; };
 		2F6CF905197B2981006A6849 /* AngelHackQuizTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */; };
 		2F6CF910197B2E2F006A6849 /* quizItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F6CF90F197B2E2F006A6849 /* quizItem.m */; };
+		CD72AA26197B44A500F3D153 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA25197B44A500F3D153 /* Parse.framework */; };
+		CD72AA28197B44B600F3D153 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA27197B44B600F3D153 /* AudioToolbox.framework */; };
+		CD72AA2A197B44BC00F3D153 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA29197B44BC00F3D153 /* CFNetwork.framework */; };
+		CD72AA2C197B44C800F3D153 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA2B197B44C800F3D153 /* CoreLocation.framework */; };
+		CD72AA2E197B44CD00F3D153 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA2D197B44CD00F3D153 /* libz.dylib */; };
+		CD72AA30197B44D400F3D153 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA2F197B44D400F3D153 /* MobileCoreServices.framework */; };
+		CD72AA32197B44D900F3D153 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA31197B44D900F3D153 /* QuartzCore.framework */; };
+		CD72AA34197B44DE00F3D153 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA33197B44DE00F3D153 /* Security.framework */; };
+		CD72AA36197B44E300F3D153 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA35197B44E300F3D153 /* StoreKit.framework */; };
+		CD72AA38197B44EA00F3D153 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD72AA37197B44EA00F3D153 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +66,16 @@
 		2F6CF904197B2981006A6849 /* AngelHackQuizTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AngelHackQuizTests.m; sourceTree = "<group>"; };
 		2F6CF90E197B2E2F006A6849 /* quizItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quizItem.h; sourceTree = "<group>"; };
 		2F6CF90F197B2E2F006A6849 /* quizItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = quizItem.m; sourceTree = "<group>"; };
+		CD72AA25197B44A500F3D153 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CD72AA27197B44B600F3D153 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CD72AA29197B44BC00F3D153 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CD72AA2B197B44C800F3D153 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CD72AA2D197B44CD00F3D153 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		CD72AA2F197B44D400F3D153 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CD72AA31197B44D900F3D153 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CD72AA33197B44DE00F3D153 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CD72AA35197B44E300F3D153 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CD72AA37197B44EA00F3D153 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,8 +83,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD72AA38197B44EA00F3D153 /* SystemConfiguration.framework in Frameworks */,
+				CD72AA36197B44E300F3D153 /* StoreKit.framework in Frameworks */,
+				CD72AA34197B44DE00F3D153 /* Security.framework in Frameworks */,
+				CD72AA32197B44D900F3D153 /* QuartzCore.framework in Frameworks */,
+				CD72AA30197B44D400F3D153 /* MobileCoreServices.framework in Frameworks */,
+				CD72AA2E197B44CD00F3D153 /* libz.dylib in Frameworks */,
+				CD72AA2C197B44C800F3D153 /* CoreLocation.framework in Frameworks */,
 				2F6CF8DC197B2981006A6849 /* CoreGraphics.framework in Frameworks */,
+				CD72AA2A197B44BC00F3D153 /* CFNetwork.framework in Frameworks */,
+				CD72AA28197B44B600F3D153 /* AudioToolbox.framework in Frameworks */,
 				2F6CF8DE197B2981006A6849 /* UIKit.framework in Frameworks */,
+				CD72AA26197B44A500F3D153 /* Parse.framework in Frameworks */,
 				2F6CF8DA197B2981006A6849 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +115,7 @@
 		2F6CF8CD197B2981006A6849 = {
 			isa = PBXGroup;
 			children = (
+				CD72AA25197B44A500F3D153 /* Parse.framework */,
 				2F6CF8DF197B2981006A6849 /* AngelHackQuiz */,
 				2F6CF8FE197B2981006A6849 /* AngelHackQuizTests */,
 				2F6CF8D8197B2981006A6849 /* Frameworks */,
@@ -104,6 +135,15 @@
 		2F6CF8D8197B2981006A6849 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD72AA37197B44EA00F3D153 /* SystemConfiguration.framework */,
+				CD72AA35197B44E300F3D153 /* StoreKit.framework */,
+				CD72AA33197B44DE00F3D153 /* Security.framework */,
+				CD72AA31197B44D900F3D153 /* QuartzCore.framework */,
+				CD72AA2F197B44D400F3D153 /* MobileCoreServices.framework */,
+				CD72AA2D197B44CD00F3D153 /* libz.dylib */,
+				CD72AA2B197B44C800F3D153 /* CoreLocation.framework */,
+				CD72AA29197B44BC00F3D153 /* CFNetwork.framework */,
+				CD72AA27197B44B600F3D153 /* AudioToolbox.framework */,
 				2F6CF8D9197B2981006A6849 /* Foundation.framework */,
 				2F6CF8DB197B2981006A6849 /* CoreGraphics.framework */,
 				2F6CF8DD197B2981006A6849 /* UIKit.framework */,
@@ -382,6 +422,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AngelHackQuiz/AngelHackQuiz-Prefix.pch";
 				INFOPLIST_FILE = "AngelHackQuiz/AngelHackQuiz-Info.plist";
@@ -395,6 +439,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AngelHackQuiz/AngelHackQuiz-Prefix.pch";
 				INFOPLIST_FILE = "AngelHackQuiz/AngelHackQuiz-Info.plist";
@@ -462,6 +510,7 @@
 				2F6CF90A197B2981006A6849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F6CF90B197B2981006A6849 /* Build configuration list for PBXNativeTarget "AngelHackQuizTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +519,7 @@
 				2F6CF90D197B2981006A6849 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
