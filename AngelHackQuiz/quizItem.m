@@ -9,13 +9,40 @@
 #import "quizItem.h"
 
 @implementation quizItem
+
+-(void)addQuestion:(NSString*) newQuestion {
+    self.askedQuestion = newQuestion;
+}
+
+-(void)addAnswer: (NSString*) newAnswer{
+    self.answer = newAnswer;
+}
+
+-(id)initWithQuestion:(NSString *)aQuestion{
+    if(self = [super init])
+    {
+        self.askedQuestion = aQuestion;
+        self.answer = @"";
+    }
+    return self;
+}
+
+-(id)initWithQuestion:(NSString *)aQuestion andAnswer:(NSString *)aAnswer{
+    if(self = [super init])
+    {
+        self.askedQuestion = aQuestion;
+        self.answer = aAnswer;
+    }
+    return self;
+}
+
 -(id)init {
     
     id newInstance = [super init];
     
     if(newInstance){
         
-    _question = [NSString stringWithFormat:@""];
+    _askedQuestion = [NSString stringWithFormat:@""];
         _answer = [NSString stringWithFormat:@""];
         
         return newInstance;

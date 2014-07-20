@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface quizItem : NSObject
-@property (nonatomic) NSString * answer;
-@property (nonatomic) NSString * question;
 
--(id)init;
+@property(strong) NSString *askedQuestion;
+@property(strong) NSString *answer;
+
+-(void)addQuestion: (NSString *)newQuestion;
+-(void)addAnswer: (NSString *)newAnswer;
+
+-(id) init;
+-(id)initWithQuestion:(NSString *)aQuestion;
+-(id)initWithQuestion:(NSString *)aQuestion andAnswer: (NSString *)aAnswer;
 
 @end
