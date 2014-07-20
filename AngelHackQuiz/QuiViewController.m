@@ -290,7 +290,7 @@
                         
                     } else {
                         
-                        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congratulations" message:@"You completed this Problem Set" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
                         [alert show];
                         
                     }
@@ -300,7 +300,7 @@
                     
                 } else {
                     
-                    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                    UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congratulations" message:@"You completed this Problem Set" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
                     [alert show];
                     
                 }
@@ -309,14 +309,14 @@
                 
             } else {
                 
-                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+                UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congratulations" message:@"You completed this Problem Set" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
                 [alert show];
             }
             
             
         } else {
             
-            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+            UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congratulations" message:@"You completed this Problem Set" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
             [alert show];
             
             
@@ -325,7 +325,7 @@
         
     } else {
         
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congrats" message:@"you completed all questions" delegate:self cancelButtonTitle:@"ok" otherButtonTitles: nil];
+        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Congratulations" message:@"You completed this Problem Set" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
         [alert show];
     }
     
